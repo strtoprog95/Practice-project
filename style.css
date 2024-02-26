@@ -1,0 +1,591 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    min-height: 100lvh;
+    color: rgb(31, 19, 19);
+    background-color: #d9d9d9;
+}
+
+/* ========================== Navbar ========================== */
+
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    margin-top: -3em;
+    background-color: white;
+    filter: drop-shadow(0 .34vw .34vw rgba(0, 0, 0, 0.416));
+}
+
+ul {
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+li {
+    margin: .8em;
+    height: 4svh;
+    list-style: none;
+    font-size: 1.8svw;
+    font-weight: 600;
+    padding: 0;
+    display: flex;
+    justify-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    align-self: center;
+}
+
+img.logo-img {
+    width: 3svw;
+    margin: 1rem;
+    align-self: center; 
+} 
+
+li:first-child {
+    margin-right: auto;
+}
+
+a:hover {
+    color: rgb(0, 170, 255);
+} 
+
+
+
+/* ========================== BANNER ========================== */
+
+#banner {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    background-image: url(./images/icons/cafeteria.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 3rem;
+}
+
+.container-banner {
+    width: 100%;
+    display: flex;
+}
+
+h1 {
+    font-size: 5lvw;
+    margin-top: 6lvh;
+    padding-top: 2lvw;
+    width: 100%;
+    text-align: center;
+    transition: all .8s ease-in;
+    text-shadow: .08em .1em .1em rgba(0, 0, 0, 0.946);
+    color: azure;
+}
+
+span {
+    color: rgb(0, 170, 255);
+}
+
+span.letter {
+    font-size: 6.5lvw;
+}
+
+.wrapper-words {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10rem;
+}
+
+.animated-text {
+    font-size: 4svw;
+    font-weight: 200;
+    min-width: 34vw;
+    color: azure;
+    text-shadow: .08em .1em .1em rgba(0, 0, 0, 0.887);
+}
+
+.animated-text span {
+    position: relative;
+}
+
+.animated-text span::before {
+    content: "Calidad";
+    color: rgb(0, 170, 255);
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: words 10s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes words {
+    0%,20% {
+        content: "Calidad";
+    }
+    21%,40% {
+        content: "Excelencia";
+    }
+    41%,60% {
+        content: "Preferencia";
+    }
+    61%,80% {
+        content: "Destacados";
+    }
+    81%,100% {
+        content: "Para ti";
+    }
+}
+
+.wrapper-text {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.wrapper-text p { /* change in media query mobile */
+    font-size: 1.7svw;
+    color: azure;
+    border-radius: 10%;
+    text-align: left;
+    width: 30svw;
+    font-weight: 800;
+    margin: 5rem;
+    text-shadow: .08em .1em .1em rgba(0, 0, 0, 0.887);
+
+}
+
+h2 {
+    font-size: 4lvw;
+    margin-bottom: .3em;
+    width: 100%;
+    text-align: center;
+    text-shadow: .08em .1em .1em rgba(0, 0, 0, 0.658);
+    color: azure;
+}
+
+/* ========================== ABOUT US ========================== */
+
+#about-us {
+    width: 100%;
+    height: auto;
+    padding: 3em 0;
+}
+
+.container-mision {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5lvw 0;
+}
+
+.mision {
+    width: 30svw;
+    height: auto;
+    margin: 0 2rem;
+}
+
+.mision p, .vision p {
+    font-size: 1.8svw;
+    text-align: center;
+    color: black;
+    filter: drop-shadow(.08em .1em .1em black);
+    background-color: rgba(105, 193, 255, 0.822);
+    border-radius: .8em;
+    margin: .6em 0;
+}
+
+.vision {
+    width: 30svw;
+    height: auto;
+    margin: 0 2rem;
+}
+
+.vision p {
+    font-size: 1.7svw;
+}
+
+
+/* ========================== PRODUCTOS ========================== */
+
+#product {
+    width: 100%;
+    height: auto;
+}
+
+.container-product {
+    width: 100%;
+    padding: 5em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.container-product h2 {
+    color: rgba(0, 0, 0, 0.815);
+}
+
+.product-1, .product-2, .product-3 {
+    width: 20svw;
+    height: auto;
+    margin: 5em 2rem;
+    display: grid;
+    justify-items: center;
+}
+
+/* Producto-1 */
+
+.cafe {
+    width: 20svw;
+    height: 20svw;
+    position: relative;
+    background-image: url(./images/icons/cafe.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cafe::before, .maquina::before, .experiencia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/icons/mancha.png);
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+}
+
+/* Producto-2 */
+
+.maquina {
+    width: 20svw;
+    height: 20svw;
+    position: relative;
+    background-image: url(./images/icons/maquina.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Producto-3 */
+
+.experiencia {
+    width: 20svw;
+    height: 20svw;
+    position: relative;
+    background-image: url(./images/icons/experiencia.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#product h2 {
+    font-size: 3lvw;
+    margin-top: .6em;
+    margin-bottom: .6em;
+    width: 100%;
+    text-align: center;
+    text-shadow: .08em .1em .1em rgba(0, 0, 0, 0.433);
+    color: black;
+}
+
+/* ========================== TEAM ========================== */
+
+#team {
+    width: 100%;
+    height: auto;
+    background-image: url(./images/icons/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-team {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3lvw 0;
+}
+
+.team-1 {
+    width: 25svw;
+    height: auto;
+    margin: 2em 2em;
+    display: grid;
+    justify-items: center;
+}
+
+
+.nombre-1, .nombre-2, .nombre-3, .nombre-4, .nombre-5 {
+    width: 17svw;
+    height: 17svw;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: .3vw solid black;
+}
+
+.nombre-1 {
+ background-image: url(./images/icons/nombre-1.jpg);
+}
+.nombre-2 {
+ background-image: url(./images/icons/nombre-2.jpg); 
+}
+.nombre-3 {
+ background-image: url(./images/icons/nombre-3.jpg);
+}
+.nombre-4 {
+ background-image: url(./images/icons/nombre-4.jpg); 
+}
+.nombre-5 {
+ background-image: url(./images/icons/nombre-5.jpg);
+}
+
+h3 {
+    font-size: 3lvw;
+    margin-top: .6em;
+    margin-bottom: .3em;
+    width: 100%;
+    text-align: center;
+    text-shadow: .08em .1em .1em rgba(0, 0, 0, 0.658);
+    color: azure;
+}
+
+#team h2 {
+    padding-top: 5lvw;
+}
+
+
+
+/* ========================== CONTACTO ========================== */
+
+#contacto {
+    padding: 5lvw;
+    padding-bottom: 2vw;
+    font-size: 2vw;
+    text-align: center;
+}
+
+#contacto img {
+    width: 4vw;
+}
+
+.parrafo {
+    font-size: 2vw;
+}
+
+#contacto .contacto-1 p.parra {
+    font-size: 1vw;
+    text-align: start;
+    padding-top: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ++++++++++++++++++++++++++ BIG SCREENS ++++++++++++++++++++++++++ */
+
+
+@media screen and (min-width: 2500px) {
+    .container-banner, .container-product, .container-team {
+        padding: 5lvw 0;
+    }
+    
+}
+
+
+
+
+
+
+
+/* ++++++++++++++++++++++++++ MOBILE ++++++++++++++++++++++++++ */
+
+@media screen and (max-width: 550px) {
+    nav {
+        filter: drop-shadow(0 .5vw .5vw rgba(0, 0, 0, 0.416));
+    }
+
+    nav li {
+        font-size: 4svw;
+    }
+
+    img.logo-img {
+        width: 8svw;
+        margin: 1svw;
+        align-self: center; 
+    } 
+
+    .container-banner {
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: center;
+        padding-bottom: 8svw;
+    }
+
+    .wrapper-text p { 
+        font-size: 4svw;
+        color: azure;
+        border-radius: 10%;
+        text-align: center;
+        width: 30rem;
+        margin: 3rem 0 3rem 0;
+        font-weight: 800;
+        text-shadow: .08em .1em .1em rgba(0, 0, 0, 0.887);
+    }
+
+    .wrapper-words {
+        display: inline-flex;
+        align-items: center;
+        margin: 0 7rem 0 9rem;
+        text-align: center;
+        width: 20rem;
+    }
+    .animated-text {
+        width: 70lvw;
+        font-size: 10svw;
+        font-weight: 300;
+        color: azure;
+        text-shadow: .08em .1em .1em rgba(0, 0, 0, 0.887);
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 9svw;
+        margin-top: 4rem;
+        width: 100%;
+        text-align: center;
+        transition: all .8s ease-in;
+        text-shadow: .08em .1em .1em rgba(0, 0, 0, 0.887);
+        color: azure;
+    }
+    span.letter {
+        font-size: 11lvw;
+    }
+
+    #product h2, #about-us h2, #team h2, #contacto h2 {
+        font-size: 9svw;
+    }
+    #team h2 {
+        padding-top: 15svw;
+    }
+
+    h3 {
+        font-size: 6lvw;
+    }
+
+    .mision p, .vision p {
+        font-size: 1.5rem;
+    }
+
+    .vision h2, .mision h2 {
+        margin-top: 10svw;
+    }
+
+    .mision, .vision {
+        width: 35rem;
+    }
+
+    .product-1, .product-2, .product-3 {
+        width: 35rem;
+        margin-top: 2em;
+    }
+
+    .product-3 {
+        margin-bottom: 8em;
+    }
+
+    .cafe, .maquina, .experiencia {
+        width: 40svw;
+        height: 40svw;
+    }
+
+    .nombre-1, .nombre-2, .nombre-3, .nombre-4, .nombre-5 {
+        width: 50svw;
+        height: 50svw;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        border: 1vw solid black;
+
+    }
+
+    .team-1 {
+        width: 50svw;
+        height: auto;
+        margin: 3em 2em;
+    }
+
+    .container-team {
+        justify-content: center;
+        
+    }
+    .container-mision {
+        padding-bottom: 15svw;
+    }
+
+    #contacto {
+        padding: 13vw;
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    #contacto img {
+        width: 10vw;
+    }
+
+    #contacto p{
+        font-size: 4vw;
+    }
+
+    #contacto .contacto-1 p.parra {
+        font-size: 3vw;
+        text-align: center;
+        padding-top: 15vw;
+    }
+
+}
